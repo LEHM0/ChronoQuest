@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
 
     private Rigidbody playerRb;
-    //private bool isOnGround;
 
     void Start()
     {
@@ -17,13 +16,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Movement Inputs
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.right * horizontalInput * moveSpeed * Time.deltaTime); //+ Vector3.forward * verticalInput);
+        // Movement Physics
+        transform.Translate(Vector3.right * horizontalInput * moveSpeed * Time.deltaTime);
         transform.Translate(Vector3.forward * verticalInput * moveSpeed * Time.deltaTime);
-        //Vector3 movement = transform.right * horizontalInput + transform.forward * verticalInput;
-        //player.transform.position = movement * moveSpeed * Time.deltaTime;
 
         // Jump Physics
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
