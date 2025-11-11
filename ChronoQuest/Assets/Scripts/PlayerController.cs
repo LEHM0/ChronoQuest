@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float jump = 5f;
+    public GameObject player;
+    public float moveSpeed = 1f;
+    public float jump = 1f;
+    public bool isOnGround = true;
 
-    private Rigidbody rb;
-    private bool isOnGround;
+    private Rigidbody playerRb;
+    //private bool isOnGround;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody> ();
+        playerRb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -18,6 +20,25 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        transform.position = new Vector3(horizontalInput, 0 , verticalInput) * moveSpeed * Time.deltaTime;
+        transform.Translate(Vector3.right * horizontalInput); //+ Vector3.forward * verticalInput);
+        transform.Translate(Vector3.forward * verticalInput);
+        //Vector3 movement = transform.right * horizontalInput + transform.forward * verticalInput;
+        //player.transform.position = movement * moveSpeed * Time.deltaTime;
+
+        // Jump Physics
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        {
+            playerRb.AddForce(Vector3.up * jump, ForceMode.Impulse);
+            isOnGround = false;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Ensures the Player can only jump again after touching the Ground
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+        }
     }
 }
