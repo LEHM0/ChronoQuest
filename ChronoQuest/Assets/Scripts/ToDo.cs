@@ -3,10 +3,11 @@ using UnityEngine;
 public class ToDo : MonoBehaviour
 {
     /*
+     * Player Movement + Physics:
      * Basic Player Movement - DONE
      * Fix: Player Spawns in ground - DONE
      * Fix: Player tips over - DONE
-     * Fix: Player moves too fast - Working On
+     * Fix: Player moves too fast - DONE
      * Camera follows Player POV - DONE
      * Player can turn using the Mouse - Working On
      */
@@ -17,5 +18,7 @@ public class ToDo : MonoBehaviour
      * Puzzle Elements + Logic
      * Story Flags
      * Co-Op Mode
+     * Menus
+     * Game Saving
      */
 }

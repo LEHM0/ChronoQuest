@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject player;
-    public float moveSpeed = 1f;
+    public float moveSpeed = 5f;
     public float jump = 5f;
     public bool isOnGround = true;
 
@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.right * horizontalInput); //+ Vector3.forward * verticalInput);
-        transform.Translate(Vector3.forward * verticalInput);
+        transform.Translate(Vector3.right * horizontalInput * moveSpeed * Time.deltaTime); //+ Vector3.forward * verticalInput);
+        transform.Translate(Vector3.forward * verticalInput * moveSpeed * Time.deltaTime);
         //Vector3 movement = transform.right * horizontalInput + transform.forward * verticalInput;
         //player.transform.position = movement * moveSpeed * Time.deltaTime;
 

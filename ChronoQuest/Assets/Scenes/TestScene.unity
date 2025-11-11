@@ -665,7 +665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   player: {fileID: 524896047}
-  moveSpeed: 1
+  moveSpeed: 5
   jump: 5
   isOnGround: 1
 --- !u!1 &832575517
