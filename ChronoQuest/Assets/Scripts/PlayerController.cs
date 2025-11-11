@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject player;
     public float moveSpeed = 1f;
-    public float jump = 1f;
+    public float jump = 5f;
     public bool isOnGround = true;
 
     private Rigidbody playerRb;
