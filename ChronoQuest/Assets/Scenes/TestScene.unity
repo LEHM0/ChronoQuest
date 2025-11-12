@@ -270,6 +270,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   player: {fileID: 524896047}
+  sensitivity: 100
+  yRot: 1
+  xRot: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0

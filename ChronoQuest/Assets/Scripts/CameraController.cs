@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject player;
-    public float sensitivity = 15f;
+    public float sensitivity = 100f;
     public float yRot = 1f;
     public float xRot = 1f;
 
