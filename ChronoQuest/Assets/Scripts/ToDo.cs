@@ -10,7 +10,7 @@ public class ToDo : MonoBehaviour
      * Fix: Player moves too fast - DONE
      * Camera follows Player POV - DONE
      * Player can turn using the Mouse - Working On
-     * ToDo: Significantly improve camera sensitivity - Working On
+     * ToDo: Significantly improve camera sensitivity - DONE
      * Fix: Camera's Y rotation is inverted - Working On
      */
 
