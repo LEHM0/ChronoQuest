@@ -4,7 +4,11 @@ public class PuzzleBaseClass : MonoBehaviour
 {
     void Start()
     {
-        //TestPuzzle tp = new TestPuzzle("Test Puzzle 01");
+        GameObject puzzleObj = new GameObject("Test Puzzle");
+        TestPuzzle tp = puzzleObj.AddComponent<TestPuzzle>();
+        tp.puzzleID = "Test Puzzle 01";
+
+        Debug.Log("Test puzzle instantiated");
     }
 
     void Update()
@@ -19,16 +23,30 @@ interface ISolved
     bool solved { get; set; }
 }
 
-public class Puzzle : ISolved
+public class Puzzle : MonoBehaviour, ISolved
 {
-    //The variable checked for progression, an ID constructor for debugging purposes, and the solution logic
-    public bool solved { get; set; }
-    public string puzzleID { get; set; }
+    //The variable checked for progression, an ID for debugging purposes, and the solution logic
+    [SerializeField] private bool _solved { get; set; }
+    [SerializeField] private string _puzzleID { get; set; }
 
-    public Puzzle(string id)
+    public bool solved
     {
-        solved = false;
-        puzzleID = id;
+        get { return _solved; }
+        set { _solved = value; }
+    }
+
+    public string puzzleID
+    {
+        get { return _puzzleID; }
+        set { _puzzleID = value; }
+    }
+
+    protected virtual void Update()
+    {
+        if (!_solved)
+        {
+            Solution();
+        }
     }
 
     public virtual void Solution()
@@ -39,7 +57,7 @@ public class Puzzle : ISolved
 
 public class TestPuzzle : Puzzle
 {
-    public TestPuzzle(string id) : base(id) { }
+    public TestPuzzle(string id) { }
 
     public override void Solution()
     {
