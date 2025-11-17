@@ -15,9 +15,22 @@ public class ToDo : MonoBehaviour
      */
 
     /*
+     * Puzzle Logic:
+     * Solved Bool Variable - DONE
+     * Puzzle ID is logged when Solved (according to its own method) - Working On
+     * Related Obstacle GO is removed (according to its own method) when Solved
+     */
+
+    /*
+     * Basic Puzzle Types:
+     * Tile Matching
+     * Slider Tiles?
+     * Chess-like Guard Evading?
+     */
+
+    /*
      * Other Checklists:
      * NPCs + NPC/Player Interaction
-     * Puzzle Elements + Logic
      * Story Flags
      * Co-Op Mode
      * Menus
