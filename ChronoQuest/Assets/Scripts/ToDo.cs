@@ -15,8 +15,17 @@ public class ToDo : MonoBehaviour
      */
 
     /*
+     * NPC Interaction:
+     * Placholder NPC Model
+     * Player Interaction (Box Collider + GetKeyDown?)
+     * NPC Textbox
+     * ToDo: NPC's react differently to the timeline's state
+     * (TL State will probably be it's own var in a diff script, but we'll save that for ltr)
+     * Spawnpoint (Static Pos/Roaming?)
+     */
+
+    /*
      * Other Checklists:
-     * NPCs + NPC/Player Interaction
      * Puzzle Elements + Logic
      * Story Flags
      * Co-Op Mode
