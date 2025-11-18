@@ -18,9 +18,10 @@ public class ToDo : MonoBehaviour
      * Puzzle Logic:
      * Solved Bool Variable - DONE
      * Puzzle ID is logged when Solved (according to its own method) - DONE
-     * ToDo: Test Puzzle has its own GO in the Scene already
+     * ToDo: Test Puzzle has its own GO in the Scene already - Works for now
      * Fix: Variables still can't be seen in the editor
-     * Related Obstacle GO is removed (according to its own method) when Solved - Working On
+     * Related Obstacle GO is removed (according to its own method) when Solved - DONE
+     * Fix: "Obstacle Removed" log repeats endlessly - DONE
      */
 
     /*

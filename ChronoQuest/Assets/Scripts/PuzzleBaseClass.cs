@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class PuzzleBaseClass : MonoBehaviour
 {
-    void Start()
+    public GameObject puzzleObj;// = new GameObject("Test Puzzle");
+    //TestPuzzle tp = puzzleObj.AddComponent<TestPuzzle>();
+    //tp.puzzleID = "Test Puzzle 01";
+
+    //Awake runs before Start, so this script assigns the TestPuzzle component in Awake, and the ObstacleController script checks for the component in Start
+    void Awake()
     {
-        GameObject puzzleObj = new GameObject("Test Puzzle");
+        //GameObject puzzleObj = new GameObject("Test Puzzle");
         TestPuzzle tp = puzzleObj.AddComponent<TestPuzzle>();
         tp.puzzleID = "Test Puzzle 01";
 
