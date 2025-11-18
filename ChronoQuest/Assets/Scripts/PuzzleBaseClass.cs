@@ -2,23 +2,26 @@ using UnityEngine;
 
 public class PuzzleBaseClass : MonoBehaviour
 {
-    public GameObject puzzleObj;// = new GameObject("Test Puzzle");
-    //TestPuzzle tp = puzzleObj.AddComponent<TestPuzzle>();
-    //tp.puzzleID = "Test Puzzle 01";
+    public GameObject puzzleObjOne;
+    public GameObject puzzleObjTwo;
 
     //Awake runs before Start, so this script assigns the TestPuzzle component in Awake, and the ObstacleController script checks for the component in Start
     void Awake()
     {
-        //GameObject puzzleObj = new GameObject("Test Puzzle");
-        TestPuzzle tp = puzzleObj.AddComponent<TestPuzzle>();
-        tp.puzzleID = "Test Puzzle 01";
+        TestPuzzle tpOne = puzzleObjOne.AddComponent<TestPuzzle>();
+        tpOne.puzzleID = "Test Puzzle 01";
 
-        Debug.Log("Test puzzle instantiated");
+        Debug.Log("Test puzzle 01 instantiated");
+
+        TestPuzzle tpTwo = puzzleObjTwo.AddComponent<TestPuzzle>();
+        tpTwo.puzzleID = "Test Puzzle 02";
+
+        Debug.Log("Test puzzle 02 instantiated");
     }
 
     void Update()
     {
-        
+        //Remove?
     }
 }
 
@@ -56,7 +59,7 @@ public class Puzzle : MonoBehaviour, ISolved
 
     public virtual void Solution()
     {
-        Debug.Log("If you're seeing this, something went wrong");
+        Debug.Log("Base Solution Method: You Shouldn't Be Seeing This");
     }
 }
 
@@ -66,7 +69,12 @@ public class TestPuzzle : Puzzle
 
     public override void Solution()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (puzzleID == "Test Puzzle 01" && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log($"{puzzleID} solved!");
+            solved = true;
+        }
+        if (puzzleID == "Test Puzzle 02" && Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log($"{puzzleID} solved!");
             solved = true;
