@@ -19,11 +19,11 @@ public class ToDo : MonoBehaviour
      * Solved Bool Variable - DONE
      * Puzzle ID is logged when Solved (according to its own method) - DONE
      * ToDo: Test Puzzle has its own GO in the Scene already - Works for now
-     * Fix: Variables still can't be seen in the editor
+     * Fix: Variables still can't be seen in the editor - Working On
      * Related Obstacle GO is removed (according to its own method) when Solved - DONE
      * Fix: "Obstacle Removed" log repeats endlessly - DONE
      * ToDo: Make Obstacles their own inheritable class - Working On
-     * Fix: Obstacles are not being removed - Working On
+     * Fix: Obstacles are not being removed - DONE
      * Fix: NullReferenceException at ObstacleController line 86 - DONE
      * ToDo: Test to ensure multiple puzzles + obstacles don't conflict or intersect w/ each other - Technically Works but it's hard coded
      * Idea: Give Puzzle + Obstacle types their own tags to help w/ sorting + avoiding conflicts - DONE

@@ -63,7 +63,7 @@ public class Puzzle : MonoBehaviour//, ISolved
 
 public class TestPuzzle : Puzzle
 {
-    public TestPuzzle(string id) { }
+    public TestPuzzle(string id) { } //Remove this line?
 
     public override void Solution()
     {

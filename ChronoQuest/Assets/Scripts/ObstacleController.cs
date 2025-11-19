@@ -16,8 +16,6 @@ public class ObstacleController : MonoBehaviour
     void Start()
     {
         puzzleBaseClass = GameObject.Find("Puzzle Controller").GetComponent<PuzzleBaseClass>();
-        //connectedPuzzleOne = connectedPuzzleOneObj.GetComponent<TestPuzzle>();
-        //connectedPuzzleTwo = connectedPuzzleTwoObj.GetComponent<TestPuzzle>();
 
         //Initialize two testObs (w/ obsID) + conPuz objects
         TestObstacle toOne = testObstacleOne.AddComponent<TestObstacle>();
@@ -48,11 +46,6 @@ public class ObstacleController : MonoBehaviour
 
 public class Obstacle : MonoBehaviour
 {
-    //[SerializeField] private bool _cleared;
-    //[SerializeField] private string _obstacleID;
-    //[SerializeField] private GameObject _connectedPuzzleObj;
-    //private Puzzle _connectedPuzzle;
-
     public bool cleared;
     public string obstacleID;
     public GameObject connectedPuzzleObj;
@@ -89,7 +82,7 @@ public class Obstacle : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (!cleared)
+        if (!cleared && connectedPuzzle.solved)
         {
             ClearObstacle();
         }
@@ -103,15 +96,10 @@ public class Obstacle : MonoBehaviour
 
 public class TestObstacle : Obstacle
 {
-    public TestObstacle(string obstacleID) { }
-
     public override void ClearObstacle()
     {
-        //if (connectedPuzzleObj.solved == true)
-        //{
-        //    Destroy(gameObject);
-        //    cleared = true;
-        //    Debug.Log($"{obstacleID} removed!");
-        //}
+        Destroy(gameObject);
+        cleared = true;
+        Debug.Log($"{obstacleID} removed!");
     }
 }
