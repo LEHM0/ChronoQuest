@@ -18,36 +18,34 @@ public class PuzzleBaseClass : MonoBehaviour
 
         Debug.Log("Test puzzle 02 instantiated");
     }
-
-    void Update()
-    {
-        //Remove?
-    }
 }
 
-interface ISolved
-{
-    //An inheritable bool value checked for by progression gates
-    bool solved { get; set; }
-}
+//interface ISolved
+//{
+//    //An inheritable bool value checked for by progression gates
+//    bool solved;// { get; set; }
+//}
 
-public class Puzzle : MonoBehaviour, ISolved
+public class Puzzle : MonoBehaviour//, ISolved
 {
     //The variable checked for progression, an ID for debugging purposes, and the solution logic
-    [SerializeField] private bool _solved { get; set; }
-    [SerializeField] private string _puzzleID { get; set; }
+    [SerializeField] private bool _solved;
+    [SerializeField] private string _puzzleID;
 
-    public bool solved
-    {
-        get { return _solved; }
-        set { _solved = value; }
-    }
+    public bool solved;
+    public string puzzleID;
 
-    public string puzzleID
-    {
-        get { return _puzzleID; }
-        set { _puzzleID = value; }
-    }
+    //public bool solved
+    //{
+    //    get { return _solved; }
+    //    set { _solved = value; }
+    //}
+
+    //public string puzzleID
+    //{
+    //    get { return _puzzleID; }
+    //    set { _puzzleID = value; }
+    //}
 
     protected virtual void Update()
     {

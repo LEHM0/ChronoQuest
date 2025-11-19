@@ -23,6 +23,8 @@ public class ToDo : MonoBehaviour
      * Related Obstacle GO is removed (according to its own method) when Solved - DONE
      * Fix: "Obstacle Removed" log repeats endlessly - DONE
      * ToDo: Make Obstacles their own inheritable class - Working On
+     * Fix: Obstacles are not being removed - Working On
+     * Fix: NullReferenceException at ObstacleController line 86 - DONE
      * ToDo: Test to ensure multiple puzzles + obstacles don't conflict or intersect w/ each other - Technically Works but it's hard coded
      * Idea: Give Puzzle + Obstacle types their own tags to help w/ sorting + avoiding conflicts - DONE
      */
