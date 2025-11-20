@@ -8,16 +8,11 @@ public class ObstacleController : MonoBehaviour
     public GameObject connectedPuzzleTwoObj;
 
     private PuzzleBaseClass puzzleBaseClass;
-    //private TestPuzzle connectedPuzzleOne;
-    //private TestPuzzle connectedPuzzleTwo;
-    //private bool obstacleOneRemoved = false;
-    //private bool obstacleTwoRemoved = false;
 
     void Start()
     {
         puzzleBaseClass = GameObject.Find("Puzzle Controller").GetComponent<PuzzleBaseClass>();
 
-        //Initialize two testObs (w/ obsID) + conPuz objects
         TestObstacle toOne = testObstacleOne.AddComponent<TestObstacle>();
         toOne.obstacleID = "Test Obstacle 01";
         toOne.connectedPuzzleObj = connectedPuzzleOneObj;
@@ -25,22 +20,6 @@ public class ObstacleController : MonoBehaviour
         TestObstacle toTwo = testObstacleTwo.AddComponent<TestObstacle>();
         toTwo.obstacleID = "Test Obstacle 02";
         toTwo.connectedPuzzleObj = connectedPuzzleTwoObj;
-    }
-
-    void Update()
-    {
-        //if (connectedPuzzleOne.solved && !obstacleOneRemoved)
-        //{
-        //    Destroy(testObstacleOne);
-        //    Debug.Log($"{connectedPuzzleOne.puzzleID} solved, Obstacle removed");
-        //    obstacleOneRemoved = true;
-        //}
-        //if (connectedPuzzleTwo.solved && !obstacleTwoRemoved)
-        //{
-        //    Destroy(testObstacleTwo);
-        //    Debug.Log($"{connectedPuzzleTwo.puzzleID} solved, Obstacle removed");
-        //    obstacleTwoRemoved = true;
-        //}
     }
 }
 
@@ -50,30 +29,6 @@ public class Obstacle : MonoBehaviour
     public string obstacleID;
     public GameObject connectedPuzzleObj;
     protected Puzzle connectedPuzzle;
-
-    //public bool cleared
-    //{
-    //    get { return _cleared; }
-    //    set { _cleared = value; }
-    //}
-
-    //public string obstacleID
-    //{
-    //    get { return _obstacleID; }
-    //    set { _obstacleID = value; }
-    //}
-
-    //public GameObject connectedPuzzleObj
-    //{
-    //    get { return _connectedPuzzleObj; }
-    //    set { _connectedPuzzleObj = value; }
-    //}
-
-    //public var connectedPuzzleComponentVar
-    //{
-    //    get { return _connectedPuzzleComponentVar; }
-    //    set { _connectedPuzzleComponentVar = value; }
-    //}
 
     protected virtual void Start()
     {
