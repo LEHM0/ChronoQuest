@@ -29,8 +29,8 @@ public class PuzzleBaseClass : MonoBehaviour
 public class Puzzle : MonoBehaviour//, ISolved
 {
     //The variable checked for progression, an ID for debugging purposes, and the solution logic
-    [SerializeField] private bool _solved;
-    [SerializeField] private string _puzzleID;
+    //[SerializeField] private bool _solved;
+    //[SerializeField] private string _puzzleID;
 
     public bool solved;
     public string puzzleID;
@@ -49,7 +49,7 @@ public class Puzzle : MonoBehaviour//, ISolved
 
     protected virtual void Update()
     {
-        if (!_solved)
+        if (!solved)
         {
             Solution();
         }
