@@ -1,39 +1,45 @@
 using UnityEngine;
 
-public class TileMatching : Puzzle//MonoBehaviour
+public class TileMatching : MonoBehaviour
 {
-    public GameObject tileBase;
+    public GameObject tilePoint;
     public string isColor = "Blank";
+    public string solvedColor;
+    public bool canInteract;
 
-    public GameObject blueTile;
-    public GameObject greenTile;
-    public GameObject redTile;
-    public GameObject yellowTile;
-
-    private PuzzleBaseClass puzzleBaseClass;
+    public GameObject blueTilePrefab;
+    public GameObject greenTilePrefab;
+    public GameObject redTilePrefab;
+    public GameObject yellowTilePrefab;
 
     void Start()
     {
-        puzzleBaseClass = GameObject.Find("Puzzle Controller").GetComponent<PuzzleBaseClass>();
-
-        //Set to an Empty GameObject w/ 3-4 other objects (tiles) attached to the script - DONE
-        //Player can interact w/ Tile - DONE
-        //Interacting w/ Tile changes Tile to next in sequence - DONE
-        //Tiles change in a loop - DONE
-
-        //Multiple Tile Bases that can be interacted w/ individually - Working On
-        //One Base w/ multiple Tile spots
-        //Tile can only be interacted w/ when standing in front of
+        //Multiple Tile Bases that can be interacted w/ individually - DONE
+        //One Base w/ multiple Tile spots - DONE
+        //Tile can only be interacted w/ when standing in front of - DONE
         //Multiple Tile Bases + Obstacles that don't interfere w/ each other
+        //Add: Tiles cannot be interacted with after puzzle is solved
+        //Add Related Obstacle
+    }
 
-        //Refactor SetColor into Switch Statement?
-        //Refactor SetColor into SwitchColor? <---
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            canInteract = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            canInteract = false;
+        }
     }
 
     public void SwitchColor()
     {
-        //Box Collider + Input.GetKeyDown(KeyCode.E)
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (canInteract && Input.GetKeyDown(KeyCode.Mouse0))
         {
             switch (isColor)
             {
@@ -67,7 +73,7 @@ public class TileMatching : Puzzle//MonoBehaviour
                     }
                 default:
                     {
-                        Debug.Log($"{puzzleID} color is not assinged");
+                        Debug.Log("Tile color is not assinged");
 
                         break;
                     }
@@ -75,74 +81,36 @@ public class TileMatching : Puzzle//MonoBehaviour
         }
     }
 
-    //public void SetColor()
-    //{
-    //    if (isColor == "Blue")
-    //    {
-    //        SetToBlue();
-    //    }
-    //    else if (isColor == "Green")
-    //    {
-    //        SetToGreen();
-    //    }
-    //    else if (isColor == "Red")
-    //    {
-    //        SetToRed();
-    //    }
-    //    else if (isColor == "Yellow")
-    //    {
-    //        SetToYellow();
-    //    }
-    //    else
-    //    {
-    //        Debug.Log($"{puzzleID} is blank");
-    //    }
-    //}
-
     public void SetToBlue()
     {
-        yellowTile.SetActive(false);
+        yellowTilePrefab.SetActive(false);
 
-        blueTile.SetActive(true);
+        blueTilePrefab.SetActive(true);
     }
 
     public void SetToGreen()
     {
-        blueTile.SetActive(false);
+        blueTilePrefab.SetActive(false);
 
-        greenTile.SetActive(true);
+        greenTilePrefab.SetActive(true);
     }
 
     public void SetToRed()
     {
-        greenTile.SetActive(false);
+        greenTilePrefab.SetActive(false);
 
-        redTile.SetActive(true);
+        redTilePrefab.SetActive(true);
     }
 
     public void SetToYellow()
     {
-        redTile.SetActive(false);
+        redTilePrefab.SetActive(false);
 
-        yellowTile.SetActive(true);
+        yellowTilePrefab.SetActive(true);
     }
 
-    public override void Solution()
+    void Update()
     {
-        //Insert Solution Logic
-    }
-
-    protected override void Update()
-    {
-        base.Update();
-
         SwitchColor();
-
-        //SetColor();
-
-        //if (!solved)
-        //{
-        //    Solution();
-        //}
     }
 }
