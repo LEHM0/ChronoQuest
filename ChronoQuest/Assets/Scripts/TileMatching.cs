@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TileMatching : MonoBehaviour
 {
-    public GameObject tilePoint;
+    public GameObject tilePoint; //Redundant?
     public string isColor = "Blank";
     public string solvedColor;
     public bool canInteract;
@@ -17,9 +17,11 @@ public class TileMatching : MonoBehaviour
         //Multiple Tile Bases that can be interacted w/ individually - DONE
         //One Base w/ multiple Tile spots - DONE
         //Tile can only be interacted w/ when standing in front of - DONE
-        //Multiple Tile Bases + Obstacles that don't interfere w/ each other
-        //Add: Tiles cannot be interacted with after puzzle is solved
-        //Add Related Obstacle
+        //Multiple Tile Bases + Obstacles that don't interfere w/ each other - Working On
+        //Add: Tiles cannot be interacted with after puzzle is solved - Working On
+        //ToDo: Replace Tiles w/ Tile Prefabs - Working On
+        //ToDo: Turn entire obj into a Tile Puzzle Prefab
+        //Add Related Obstacle - DONE
     }
 
     private void OnTriggerEnter(Collider other)
@@ -83,9 +85,9 @@ public class TileMatching : MonoBehaviour
 
     public void SetToBlue()
     {
-        yellowTilePrefab.SetActive(false);
+        yellowTilePrefab.SetActive(false); //Instantiate?
 
-        blueTilePrefab.SetActive(true);
+        blueTilePrefab.SetActive(true); //Destroy?
     }
 
     public void SetToGreen()

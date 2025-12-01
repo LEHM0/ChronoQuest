@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class ToDo : MonoBehaviour
 {
-    /*
-     * Player Movement + Physics:
+    /* Player Movement + Physics:
      * Basic Player Movement - DONE
      * Fix: Player Spawns in ground - DONE
      * Fix: Player tips over - DONE
@@ -14,12 +13,18 @@ public class ToDo : MonoBehaviour
      * Fix: Camera's Y rotation is inverted - Working On
      */
 
-    /*
-     * Puzzle Logic:
+    /* Puzzle Prefab Logic:
+     * Separate ObstacleController and Obstacle into seperate scripts - DONE
+     * Obstacle Logic should be on the Obstacle, no Controller needed - DONE
+     * Fix: Base Obstacle Method being called infinetly - DONE
+     * Turn Puzzles into reusable prefabs - Working On
+     * Test Obstacle Prefab Finished
+     */
+
+    /* Puzzle Logic:
      * Solved Bool Variable - DONE
      * Puzzle ID is logged when Solved (according to its own method) - DONE
      * ToDo: Test Puzzle has its own GO in the Scene already - DONE
-     * Fix: Variables still can't be seen in the editor - Working On (Make the Puzzle classes the main component?)
      * Related Obstacle GO is removed (according to its own method) when Solved - DONE
      * Fix: "Obstacle Removed" log repeats endlessly - DONE
      * ToDo: Make Obstacles their own inheritable class - DONE
@@ -27,19 +32,16 @@ public class ToDo : MonoBehaviour
      * Fix: NullReferenceException at ObstacleController line 86 - DONE
      * ToDo: Test to ensure multiple puzzles + obstacles don't conflict or intersect w/ each other - DONE
      * Idea: Give Puzzle + Obstacle types their own tags to help w/ sorting + avoiding conflicts - DONE
-     * Idea: Refactor so setting up puzzles is handled in the editor, scripts do not need to handle anything other than logic
-     * ToDo: Turn Puzzles + Obstacles into reusable Prefabs
+     * Idea: Refactor so setting up puzzles is handled in the editor, scripts do not need to handle anything other than logic - Working On
      */
 
-    /*
-     * Basic Puzzle Types:
+    /* Basic Puzzle Types:
      * Tile Matching - DONE
      * Slider Tiles?
      * Chess-like Guard Evading?
      */
 
-    /*
-     * Other Checklists:
+    /* Other Checklists:
      * NPCs + NPC/Player Interaction
      * Story Flags
      * Co-Op Mode
