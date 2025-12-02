@@ -12,18 +12,6 @@ public class TileMatching : MonoBehaviour
     public GameObject redTilePrefab;
     public GameObject yellowTilePrefab;
 
-    void Start()
-    {
-        //Multiple Tile Bases that can be interacted w/ individually - DONE
-        //One Base w/ multiple Tile spots - DONE
-        //Tile can only be interacted w/ when standing in front of - DONE
-        //Multiple Tile Bases + Obstacles that don't interfere w/ each other - Working On
-        //Add: Tiles cannot be interacted with after puzzle is solved - Working On
-        //ToDo: Replace Tiles w/ Tile Prefabs - Working On
-        //ToDo: Turn entire obj into a Tile Puzzle Prefab
-        //Add Related Obstacle - DONE
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -85,9 +73,9 @@ public class TileMatching : MonoBehaviour
 
     public void SetToBlue()
     {
-        yellowTilePrefab.SetActive(false); //Instantiate?
+        yellowTilePrefab.SetActive(false);
 
-        blueTilePrefab.SetActive(true); //Destroy?
+        blueTilePrefab.SetActive(true);
     }
 
     public void SetToGreen()

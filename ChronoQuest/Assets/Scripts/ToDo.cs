@@ -17,7 +17,8 @@ public class ToDo : MonoBehaviour
      * Separate ObstacleController and Obstacle into seperate scripts - DONE
      * Obstacle Logic should be on the Obstacle, no Controller needed - DONE
      * Fix: Base Obstacle Method being called infinetly - DONE
-     * Turn Puzzles into reusable prefabs - Working On
+     * Turn Puzzles into reusable prefabs - DONE
+     * Fix: Tile Prefabs do not switch - DONE
      * Test Obstacle Prefab Finished
      */
 
@@ -32,7 +33,7 @@ public class ToDo : MonoBehaviour
      * Fix: NullReferenceException at ObstacleController line 86 - DONE
      * ToDo: Test to ensure multiple puzzles + obstacles don't conflict or intersect w/ each other - DONE
      * Idea: Give Puzzle + Obstacle types their own tags to help w/ sorting + avoiding conflicts - DONE
-     * Idea: Refactor so setting up puzzles is handled in the editor, scripts do not need to handle anything other than logic - Working On
+     * Idea: Refactor so setting up puzzles is handled in the editor, scripts do not need to handle anything other than logic - DONE
      */
 
     /* Basic Puzzle Types:
