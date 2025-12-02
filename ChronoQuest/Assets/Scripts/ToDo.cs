@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class ToDo : MonoBehaviour
 {
-    /*
-     * Player Movement + Physics:
+    /* Player Movement + Physics:
      * Basic Player Movement - DONE
      * Fix: Player Spawns in ground - DONE
      * Fix: Player tips over - DONE
@@ -14,18 +13,16 @@ public class ToDo : MonoBehaviour
      * Fix: Camera's Y rotation is inverted - Working On
      */
 
-    /*
-     * NPC Interaction:
-     * Placholder NPC Model
-     * Player Interaction (Box Collider + GetKeyDown?)
-     * NPC Textbox
+    /* NPC Interaction:
+     * Placholder NPC Model - DONE
+     * Player Interaction (Box Collider + GetKeyDown?) - DONE
+     * NPC Textbox - Working On
      * ToDo: NPC's react differently to the timeline's state
      * (TL State will probably be it's own var in a diff script, but we'll save that for ltr)
-     * Spawnpoint (Static Pos/Roaming?)
+     * Spawnpoint (Static Pos)
      */
 
-    /*
-     * Other Checklists:
+    /* Other Checklists:
      * Puzzle Elements + Logic
      * Story Flags
      * Co-Op Mode
