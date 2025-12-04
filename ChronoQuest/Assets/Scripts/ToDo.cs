@@ -16,8 +16,9 @@ public class ToDo : MonoBehaviour
     /* NPC Interaction:
      * Placholder NPC Model - DONE
      * Player Interaction (Box Collider + GetKeyDown?) - DONE
-     * NPC Textbox - Working On
-     * ToDo: Tweak Dialogue Wrapping
+     * NPC Textbox - DONE
+     * ToDo: Player can move through an NPCs dialogue one line at a time - Working On
+     * ToDo: Tweak Dialogue Wrapping - DONE
      * ToDo: NPC's react differently to the timeline's state
      * (TL State will probably be it's own var in a diff script, but we'll save that for ltr)
      * Spawnpoint (Static Pos)
