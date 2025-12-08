@@ -24,6 +24,13 @@ public class ToDo : MonoBehaviour
      * Spawnpoint (Static Pos)
      */
 
+    /* Trading Quest:
+     * Player can pick up first item in trading sequence - DONE
+     * Player can interact with trader npcs who ask for certain items - Need to work on dialogue
+     * Interacting with traders in the correct sequence trades one item for another - DONE
+     * ToDo: Refactor TradingQuest into TraderNPCController?
+     */
+
     /* Other Checklists:
      * Puzzle Elements + Logic
      * Story Flags

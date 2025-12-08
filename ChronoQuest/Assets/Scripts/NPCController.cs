@@ -41,7 +41,7 @@ public class NPCController : MonoBehaviour
         }
     }
 
-    private void Talk()
+    public virtual void Talk()
     {
         if (canTalk && Input.GetKeyDown(KeyCode.Mouse0))
         {
