@@ -13,6 +13,12 @@ public class ToDo : MonoBehaviour
      * Fix: Camera's Y rotation is inverted - Working On
      */
 
+    /* Sound Tone Puzzle Logic:
+     * Button which plays a short sequence of sound tones - Working On
+     * Buttons which play individual sound tones - Working On
+     * Pressing the buttons in the same order as the sequence marks the puzzle as solved
+     */
+
     /* Puzzle Prefab Logic:
      * Separate ObstacleController and Obstacle into seperate scripts - DONE
      * Obstacle Logic should be on the Obstacle, no Controller needed - DONE
@@ -38,8 +44,8 @@ public class ToDo : MonoBehaviour
 
     /* Basic Puzzle Types:
      * Tile Matching - DONE
-     * Slider Tiles?
-     * Chess-like Guard Evading?
+     * Trading Quest - DONE
+     * Sound Tones - Working On
      */
 
     /* Other Checklists:
