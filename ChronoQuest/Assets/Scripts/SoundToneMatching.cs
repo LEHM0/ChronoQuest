@@ -17,12 +17,12 @@ public class SoundToneMatching : Puzzle
         base.Update();
 
         PlaySequence();
-        //PlayTone();
     }
 
     public override void Solution()
     {
         //
+        CompareSequence();
     }
 
     public void PlaySequence()
@@ -33,11 +33,27 @@ public class SoundToneMatching : Puzzle
             foreach (int i in toneSequence)
             {
                 Debug.Log($"Playing tone in sequence: {i}");
+                //Will play each tone audio in sequence
             }
         }
     }
 
     public void PlayTone()
+    {
+        //
+        Debug.Log($"Playing tone: {toneNum}");
+        //Add toneNum to empty array
+    }
+
+    /*public void CreateSequence()
+     * {Pressing the buttons in PlayTone() adds that toneNum to an array[], then compares that array to the toneSequence; if they are equal, set solved to true}
+     */
+    public void CreateSequence()
+    {
+        //
+    }
+
+    public void CompareSequence()
     {
         //
     }

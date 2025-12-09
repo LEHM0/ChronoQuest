@@ -17,6 +17,7 @@ public class ToDo : MonoBehaviour
      * Button which plays a short sequence of sound tones - Working On
      * Buttons which play individual sound tones - Working On
      * Pressing the buttons in the same order as the sequence marks the puzzle as solved
+     * ToDo: Separate scripts and assign them to the individual components - Working On
      */
 
     /* Puzzle Prefab Logic:
