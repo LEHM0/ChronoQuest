@@ -1,11 +1,12 @@
+using System.Linq;
 using UnityEngine;
 
 public class SoundToneMatching : Puzzle
 {
     public int[] toneSequence;
-    public int toneNum; //Replace when finalizing
-    public bool canInteract = false;
-    //public audio? toneOne
+    public int[] newSequence;
+
+    public int indexValue = 0;
 
     void Start()
     {
@@ -15,56 +16,33 @@ public class SoundToneMatching : Puzzle
     protected override void Update()
     {
         base.Update();
-
-        PlaySequence();
     }
 
     public override void Solution()
     {
         //
-        CompareSequence();
-    }
-
-    public void PlaySequence()
-    {
-        //
-        if (canInteract && Input.GetKeyDown(KeyCode.Mouse0))
+        if (toneSequence.SequenceEqual(newSequence))
         {
-            foreach (int i in toneSequence)
-            {
-                Debug.Log($"Playing tone in sequence: {i}");
-                //Will play each tone audio in sequence
-            }
+            solved = true;
+
+            indexValue = 0;
+
+            Debug.Log($"{puzzleID} solved!");
+        }
+
+        else if (indexValue == 4 &&  !toneSequence.SequenceEqual(newSequence))
+        {
+            ResetSequence();
         }
     }
 
-    public void PlayTone()
+    public void ResetSequence()
     {
-        //
-        Debug.Log($"Playing tone: {toneNum}");
-        //Add toneNum to empty array
-    }
+        //Play error noise
+        System.Array.Clear(newSequence, 0, newSequence.Length);
 
-    /*public void CreateSequence()
-     * {Pressing the buttons in PlayTone() adds that toneNum to an array[], then compares that array to the toneSequence; if they are equal, set solved to true}
-     */
-    public void CreateSequence()
-    {
-        //
-    }
+        indexValue = 0;
 
-    public void CompareSequence()
-    {
-        //
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        canInteract = true;
-    }
-
-    public void OnTriggerExit(Collider other)
-    {
-        canInteract = false;
+        Debug.Log($"{puzzleID} reset");
     }
 }

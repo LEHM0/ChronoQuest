@@ -14,10 +14,15 @@ public class ToDo : MonoBehaviour
      */
 
     /* Sound Tone Puzzle Logic:
-     * Button which plays a short sequence of sound tones - Working On
-     * Buttons which play individual sound tones - Working On
-     * Pressing the buttons in the same order as the sequence marks the puzzle as solved
-     * ToDo: Separate scripts and assign them to the individual components - Working On
+     * Button which plays a short sequence of sound tones - Logic Done
+     * Buttons which play individual sound tones - Logic Done
+     * Pressing the buttons in the same order as the sequence marks the puzzle as solved - DONE
+     * ToDo: Separate scripts and assign them to the individual components - DONE
+     * Fix: Solved is not being set to true - DONE
+     * Fix: New Sequence Index is being reset one click too late - DONE
+     * Fix: Elements 2 and 3 are not being reset - DONE
+     * ToDo: Puzzle cannot be interacted with after completion
+     * ToDo: Turn Puzzle into reuseable prefab
      */
 
     /* Puzzle Prefab Logic:
