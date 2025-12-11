@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - PuzzleController
+  - TestPuzzle
+  - ObstacleController
+  - TestObstacle
+  - TileMatchController
   layers:
   - Default
   - TransparentFX

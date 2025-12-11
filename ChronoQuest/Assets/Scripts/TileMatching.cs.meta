@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 67d69bd8947f5ba42b3d7614e08b5985
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tilePoint: {instanceID: 0}
+  - blueTilePrefab: {instanceID: 0}
+  - greenTilePrefab: {instanceID: 0}
+  - redTilePrefab: {instanceID: 0}
+  - yellowTilePrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
