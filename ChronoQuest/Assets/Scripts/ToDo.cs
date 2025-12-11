@@ -56,16 +56,20 @@ public class ToDo : MonoBehaviour
      * Sound Tones - DONE
      */
 
-    /* Other Checklists:
-     * NPCs + NPC/Player Interaction
-     * Story Flags
-     * Co-Op Mode
-     * Menus
-     * Game Saving
+    /* Story Flags:
+     * Game tracks how many levels have been completed - Working On
+     * Game tracks "karma" descisions across all levels - DONE
+     * Game decides which of the two endings the player recieves after completing all levels - DONE
+     * Ending is decided by whether the player made more "good" or "bad" karma descisions - DONE
+     * Descision script chooses whether to add good karma or bad karma - Working On
+     * ToDo: Test that GM persits between scenes and the proper ending is decided - Working On
      */
 
-    /*
-     * Bugs:
-     * Fix: Player's camera movement is inverted on the Y-axis - Working On
+    /* Other Checklists:
+     * NPCs + NPC/Player Interaction - Working on in npc-interaction
+     * Co-Op Mode
+     * Menus
+     * Game Options
+     * Game Saving
      */
 }
