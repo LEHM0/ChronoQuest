@@ -12,6 +12,14 @@ public class TileMatching : MonoBehaviour
     public GameObject redTilePrefab;
     public GameObject yellowTilePrefab;
 
+    public GameObject tileMatchController;
+    private TileMatchSolution tms;
+
+    private void Start()
+    {
+        tms = tileMatchController.GetComponent<TileMatchSolution>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -29,8 +37,9 @@ public class TileMatching : MonoBehaviour
 
     public void SwitchColor()
     {
-        if (canInteract && Input.GetKeyDown(KeyCode.Mouse0))
+        if (canInteract && Input.GetKeyDown(KeyCode.Mouse0) && !tms.solved)
         {
+            //Checks the current color to determine what the next color to change to is
             switch (isColor)
             {
                 case "Blue":

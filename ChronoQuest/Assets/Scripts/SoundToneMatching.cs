@@ -3,15 +3,12 @@ using UnityEngine;
 
 public class SoundToneMatching : Puzzle
 {
+    //The solution and input arrays
     public int[] toneSequence;
     public int[] newSequence;
 
+    //Int controlling where a new input is added into the array
     public int indexValue = 0;
-
-    void Start()
-    {
-        //
-    }
 
     protected override void Update()
     {
@@ -20,7 +17,7 @@ public class SoundToneMatching : Puzzle
 
     public override void Solution()
     {
-        //
+        //Compares the input array to the solution array to see if all the values are equal to each other
         if (toneSequence.SequenceEqual(newSequence))
         {
             solved = true;
@@ -30,6 +27,7 @@ public class SoundToneMatching : Puzzle
             Debug.Log($"{puzzleID} solved!");
         }
 
+        //Checks if the player has inputted the solution incorrectly before reseting the puzzle
         else if (indexValue == 4 &&  !toneSequence.SequenceEqual(newSequence))
         {
             ResetSequence();
@@ -38,6 +36,7 @@ public class SoundToneMatching : Puzzle
 
     public void ResetSequence()
     {
+        //Clears the input array and resets the array index
         //Play error noise
         System.Array.Clear(newSequence, 0, newSequence.Length);
 

@@ -5,11 +5,11 @@ public class PlayToneSequence : MonoBehaviour
     public bool canInteract = false;
 
     public GameObject soundToneController;
-    private SoundToneMatching soundToneMatching;
+    private SoundToneMatching stm;
 
     void Start()
     {
-        soundToneMatching = soundToneController.GetComponent<SoundToneMatching>();
+        stm = soundToneController.GetComponent<SoundToneMatching>();
     }
 
     void Update()
@@ -19,10 +19,10 @@ public class PlayToneSequence : MonoBehaviour
 
     public void PlaySequence()
     {
-        //
-        if (canInteract && Input.GetKeyDown(KeyCode.Mouse0))
+        //When pressed, a unique series of sound tones is played
+        if (canInteract && Input.GetKeyDown(KeyCode.Mouse0) && !stm.solved)
         {
-            foreach (int i in soundToneMatching.toneSequence)
+            foreach (int i in stm.toneSequence)
             {
                 Debug.Log($"Playing tone in sequence: {i}");
                 //Will play each tone audio in sequence

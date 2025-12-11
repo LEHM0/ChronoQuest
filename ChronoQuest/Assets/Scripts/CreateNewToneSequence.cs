@@ -6,11 +6,11 @@ public class CreateNewToneSequence : MonoBehaviour
     public bool canInteract = false;
 
     public GameObject soundToneController;
-    private SoundToneMatching soundToneMatching;
+    private SoundToneMatching stm;
 
     void Start()
     {
-        soundToneMatching = soundToneController.GetComponent<SoundToneMatching>();
+        stm = soundToneController.GetComponent<SoundToneMatching>();
     }
 
     void Update()
@@ -20,7 +20,8 @@ public class CreateNewToneSequence : MonoBehaviour
 
     public void PlayTone()
     {
-        if (canInteract && Input.GetKeyDown(KeyCode.Mouse0))
+        //Plays an audio tone once the button has been pressed
+        if (canInteract && Input.GetKeyDown(KeyCode.Mouse0) && !stm.solved)
         {
             Debug.Log($"Playing tone: {toneNum}");
             //Play the individual tone audio
@@ -31,8 +32,9 @@ public class CreateNewToneSequence : MonoBehaviour
 
     public void CreateSequence()
     {
-        soundToneMatching.newSequence.SetValue(toneNum, soundToneMatching.indexValue);
-        soundToneMatching.indexValue++;
+        //Adds the tone number to the next index of an array
+        stm.newSequence.SetValue(toneNum, stm.indexValue);
+        stm.indexValue++;
     }
 
     public void OnTriggerEnter(Collider other)

@@ -8,6 +8,7 @@ public class Puzzle : MonoBehaviour
 
     protected virtual void Update()
     {
+        //Ensures the Solution method does not run infinitely
         if (!solved)
         {
             Solution();
@@ -16,10 +17,12 @@ public class Puzzle : MonoBehaviour
 
     public virtual void Solution()
     {
+        //Overridable function for unique puzzle solutions
         Debug.Log("Base Solution Method: You Shouldn't Be Seeing This");
     }
 }
 
+//Basic Puzzle for testing purposes
 public class TestPuzzle : Puzzle
 {
     public override void Solution()

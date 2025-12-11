@@ -1,26 +1,8 @@
 using UnityEngine;
 
-//public class ObstacleController : MonoBehaviour
-//{
-//    public GameObject testObstacleOne;
-//    //public GameObject testObstacleTwo;
-//    public GameObject connectedPuzzleOneObj;
-//    //public GameObject connectedPuzzleTwoObj;
-
-//    void Start()
-//    {
-//        TestObstacle toOne = testObstacleOne.AddComponent<TestObstacle>();
-//        toOne.obstacleID = "Test Obstacle 01";
-//        toOne.connectedPuzzleObj = connectedPuzzleOneObj;
-
-//        //TestObstacle toTwo = testObstacleTwo.AddComponent<TestObstacle>();
-//        //toTwo.obstacleID = "Test Obstacle 02";
-//        //toTwo.connectedPuzzleObj = connectedPuzzleTwoObj;
-//    }
-//}
-
 public class Obstacle : MonoBehaviour
 {
+    //Main Obstacle components
     public bool cleared;
     public string obstacleID;
     public GameObject connectedPuzzleObj;
@@ -33,6 +15,7 @@ public class Obstacle : MonoBehaviour
 
     protected virtual void Update()
     {
+        //Checks to see if the puzzle has been solved and the obstacle is not already cleared
         if (!cleared && connectedPuzzle.solved)
         {
             ClearObstacle();
@@ -41,13 +24,14 @@ public class Obstacle : MonoBehaviour
 
     public virtual void ClearObstacle()
     {
-        //Debug.Log("Base Obstacle Method: You Shouldn't Be Seeing This");
+        //Base overridable method for clearing an obstacle out of the way
         Destroy(gameObject);
         cleared = true;
         Debug.Log($"{obstacleID} removed!");
     }
 }
 
+//Basic Obstacle for testing purposes
 public class TestObstacle : Obstacle
 {
     public override void ClearObstacle()

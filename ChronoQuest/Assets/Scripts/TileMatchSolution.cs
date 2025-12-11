@@ -30,6 +30,7 @@ public class TileMatchSolution : Puzzle
 
     public override void Solution()
     {
+        //Checks each tile to see if it is set to the correct sequence of colors
         if (tileOneScript.isColor == tileOneScript.solvedColor)
         {
             if (tileTwoScript.isColor == tileTwoScript.solvedColor)

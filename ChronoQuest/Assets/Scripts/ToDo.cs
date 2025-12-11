@@ -21,8 +21,10 @@ public class ToDo : MonoBehaviour
      * Fix: Solved is not being set to true - DONE
      * Fix: New Sequence Index is being reset one click too late - DONE
      * Fix: Elements 2 and 3 are not being reset - DONE
-     * ToDo: Puzzle cannot be interacted with after completion
-     * ToDo: Turn Puzzle into reuseable prefab
+     * ToDo: Puzzle cannot be interacted with after completion - DONE
+     * ToDo: Turn Puzzle into reuseable prefab - DONE
+     * ToDo: Clean up and comment scripts - DONE
+     * ToDo: Add unique sound tones and tile textures
      */
 
     /* Puzzle Prefab Logic:
@@ -51,7 +53,7 @@ public class ToDo : MonoBehaviour
     /* Basic Puzzle Types:
      * Tile Matching - DONE
      * Trading Quest - DONE
-     * Sound Tones - Working On
+     * Sound Tones - DONE
      */
 
     /* Other Checklists:

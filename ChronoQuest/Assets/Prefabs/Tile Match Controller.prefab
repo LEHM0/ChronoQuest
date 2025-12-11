@@ -168,6 +168,7 @@ MonoBehaviour:
   greenTilePrefab: {fileID: 4789349821514629228}
   redTilePrefab: {fileID: 8618293256828017984}
   yellowTilePrefab: {fileID: 8040801955067056492}
+  tileMatchController: {fileID: 5100999512743216983}
 --- !u!65 &3258753330522879215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -468,6 +469,7 @@ MonoBehaviour:
   greenTilePrefab: {fileID: 8091328487691435636}
   redTilePrefab: {fileID: 5467530204090299657}
   yellowTilePrefab: {fileID: 3780900203897192720}
+  tileMatchController: {fileID: 5100999512743216983}
 --- !u!65 &1450120200502380024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -546,6 +548,7 @@ MonoBehaviour:
   greenTilePrefab: {fileID: 1914284325465881302}
   redTilePrefab: {fileID: 1980356929869111575}
   yellowTilePrefab: {fileID: 7335126856276908781}
+  tileMatchController: {fileID: 5100999512743216983}
 --- !u!65 &5503679810980565487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -957,6 +960,7 @@ MonoBehaviour:
   greenTilePrefab: {fileID: 7920506574161938897}
   redTilePrefab: {fileID: 3534218278159137757}
   yellowTilePrefab: {fileID: 4182635202998157607}
+  tileMatchController: {fileID: 5100999512743216983}
 --- !u!65 &4198414546660962225
 BoxCollider:
   m_ObjectHideFlags: 0
