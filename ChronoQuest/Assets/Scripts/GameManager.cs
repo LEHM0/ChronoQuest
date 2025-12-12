@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     public void AddGoodKarma()
     {
         goodKarma++;
-        //Add in other script: GameManager.Instance.AddGoodKarma();
 
         Debug.Log($"Good Karma increase to {goodKarma}");
     }
@@ -35,7 +34,6 @@ public class GameManager : MonoBehaviour
     public void AddBadKarma()
     {
         badKarma++;
-        //Add in other script: GameManager.Instance.AddBadKarma();
 
         Debug.Log($"Bad Karma increase to {badKarma}");
     }
@@ -53,11 +51,54 @@ public class GameManager : MonoBehaviour
         if ( goodKarma > badKarma )
         {
             //SceneManager.LoadScene("GoodEnding");
+            Debug.Log("Good Ending Achieved!");
         }
 
         else
         {
             //SceneManager.LoadScene("BadEnding");
+            Debug.Log("Bad Ending Achieveed!");
+        }
+    }
+
+    public void ChooseLevel()
+    {
+        //
+    }
+    public void TestChooseLevel()
+    {
+        //
+    }
+
+    public void ClearLevel()
+    {
+        //
+    }
+    public void TestClearLevel()
+    {
+        switch (levelsCompleted)
+        {
+            case 0:
+                levelsCompleted++;
+                SceneManager.LoadScene("TestLevelOne");
+
+                break;
+            case 1:
+                levelsCompleted++;
+                SceneManager.LoadScene("TestLevelTwo");
+
+                break;
+            case 2:
+                levelsCompleted++;
+                SceneManager.LoadScene("TestLevelThree");
+
+                break;
+            case 3:
+                Debug.Log("All levels completed");
+                break;
+            default:
+                Debug.Log("All levels completed");
+                break;
         }
     }
 
