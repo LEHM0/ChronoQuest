@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public int levelsCompleted = 0;
     public int goodKarma = 0;
     public int badKarma = 0;
+    public bool endingTriggered = false;
 
     void Awake()
     {
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEnding()
     {
-        if (levelsCompleted == 3)
+        if (!endingTriggered && levelsCompleted == 3)
         {
             JudgeEnding();
         }
@@ -51,12 +52,14 @@ public class GameManager : MonoBehaviour
         if ( goodKarma > badKarma )
         {
             //SceneManager.LoadScene("GoodEnding");
+            endingTriggered = true;
             Debug.Log("Good Ending Achieved!");
         }
 
         else
         {
             //SceneManager.LoadScene("BadEnding");
+            endingTriggered = true;
             Debug.Log("Bad Ending Achieveed!");
         }
     }

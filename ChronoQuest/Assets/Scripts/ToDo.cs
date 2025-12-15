@@ -57,14 +57,16 @@ public class ToDo : MonoBehaviour
      */
 
     /* Story Flags:
-     * Game tracks how many levels have been completed - Working On
+     * Game tracks how many levels have been completed - DONE
      * Game tracks "karma" descisions across all levels - DONE
      * Game decides which of the two endings the player recieves after completing all levels - DONE
      * Ending is decided by whether the player made more "good" or "bad" karma descisions - DONE
      * Descision script chooses whether to add good karma or bad karma - DONE
-     * ToDo: Test that GM persits between scenes and the proper ending is decided - Working On
-     * ToDo: Prevent TriggerEnding() from running infitely
-     * ToDo: Allow test levels to properly be loaded
+     * ToDo: Test that GM persits between scenes and the proper ending is decided - DONE
+     * ToDo: Prevent TriggerEnding() from running infitely - DONE
+     * ToDo: Allow test levels to properly be loaded - DONE
+     * Fix: Camera disconnects between scenes - DONE
+     * ToDo: Add Level Select - Working On
      */
 
     /* Other Checklists:

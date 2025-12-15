@@ -14,13 +14,13 @@ public class AnomalyInteraction : MonoBehaviour
     {
         if (canInteract && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            //Good Ending Test
-            GameManager.instance.AddGoodKarma();
-            GameManager.instance.TestClearLevel();
-
-            //Bad Ending Test
-            //GameManager.instance.AddBadKarma();
+            //Good Ending Test - Works
+            //GameManager.instance.AddGoodKarma();
             //GameManager.instance.TestClearLevel();
+
+            //Bad Ending Test - Works
+            GameManager.instance.AddBadKarma();
+            GameManager.instance.TestClearLevel();
         }
     }
 
