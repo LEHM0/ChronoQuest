@@ -13,6 +13,27 @@ public class ToDo : MonoBehaviour
      * Fix: Camera's Y rotation is inverted - Working On
      */
 
+    /* NPC Interaction:
+     * Placholder NPC Model - DONE
+     * Player Interaction (Box Collider + GetKeyDown?) - DONE
+     * NPC Textbox - DONE
+     * ToDo: Tweak Dialogue Wrapping - DONE
+     * ToDo: NPC's react differently to the timeline's state
+     * (TL State will probably be it's own var in a diff script, but we'll save that for ltr)
+     * ToDo: Player can move through an NPCs dialogue one line at a time - Working On
+     * Fix: Dialogue Window not appearing - DONE
+     * Fix: Only first line of dialogue appears - Working On
+     */
+
+    /* Trading Quest:
+     * Player can pick up first item in trading sequence - DONE
+     * Player can interact with trader npcs who ask for certain items - Need to work on dialogue
+     * Interacting with traders in the correct sequence trades one item for another - DONE
+     * ToDo: Refactor TradingQuest into TraderNPCController?
+     */
+
+    /* Other Checklists:
+     * Puzzle Elements + Logic
     /* Sound Tone Puzzle Logic:
      * Button which plays a short sequence of sound tones - Logic Done
      * Buttons which play individual sound tones - Logic Done
