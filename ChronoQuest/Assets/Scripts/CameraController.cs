@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    //Camera Controller script provided by ChatGPT
+
     public GameObject player;
     public float sensitivity = 150f;
     public float minSensitivity = 10f;

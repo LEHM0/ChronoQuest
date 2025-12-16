@@ -32,8 +32,6 @@ public class ToDo : MonoBehaviour
      * ToDo: Refactor TradingQuest into TraderNPCController?
      */
 
-    /* Other Checklists:
-     * Puzzle Elements + Logic
     /* Sound Tone Puzzle Logic:
      * Button which plays a short sequence of sound tones - Logic Done
      * Buttons which play individual sound tones - Logic Done
@@ -92,7 +90,6 @@ public class ToDo : MonoBehaviour
      */
 
     /* Other Checklists:
-     * NPCs + NPC/Player Interaction - Working on in npc-interaction
      * Co-Op Mode
      * Menus
      * Game Options
