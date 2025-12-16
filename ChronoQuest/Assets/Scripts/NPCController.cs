@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour
 {
+    //Dialogue System provided by:
+    //https://gamedevbeginner.com/dialogue-systems-in-unity/
+
     //Main NPC assets and dialogue
     public GameObject model;
     public bool canTalk;
