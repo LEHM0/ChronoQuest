@@ -20,7 +20,7 @@ public class AnomalyInteraction : MonoBehaviour
 
             //Bad Ending Test - Works
             GameManager.instance.AddBadKarma();
-            GameManager.instance.TestClearLevel();
+            GameManager.instance.ClearLevel();
         }
     }
 

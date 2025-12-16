@@ -68,41 +68,11 @@ public class GameManager : MonoBehaviour
     {
         //
     }
-    public void TestChooseLevel()
-    {
-        //
-    }
 
     public void ClearLevel()
     {
         //
-    }
-    public void TestClearLevel()
-    {
-        switch (levelsCompleted)
-        {
-            case 0:
-                levelsCompleted++;
-                SceneManager.LoadScene("TestLevelOne");
-
-                break;
-            case 1:
-                levelsCompleted++;
-                SceneManager.LoadScene("TestLevelTwo");
-
-                break;
-            case 2:
-                levelsCompleted++;
-                SceneManager.LoadScene("TestLevelThree");
-
-                break;
-            case 3:
-                Debug.Log("All levels completed");
-                break;
-            default:
-                Debug.Log("All levels completed");
-                break;
-        }
+        levelsCompleted++;
     }
 
     void Update()
