@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Dialogue System provided by:
+    //https://gamedevbeginner.com/dialogue-systems-in-unity/
+
     public GameObject player;
     public float moveSpeed = 5f;
     public float jump = 5f;
