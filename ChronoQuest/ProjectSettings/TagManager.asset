@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Ground
   - NPC
+  - PuzzleController
+  - TestPuzzle
+  - ObstacleController
+  - TestObstacle
+  - TileMatchController
   layers:
   - Default
   - TransparentFX
