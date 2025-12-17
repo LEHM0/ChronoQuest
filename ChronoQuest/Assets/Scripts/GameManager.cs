@@ -3,8 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private SupabaseManager supabaseManager;
+    private GameState currentGameState;
+
     public static GameManager instance;
 
+    public GameObject player;
     public int levelsCompleted = 0;
     public int goodKarma = 0;
     public int badKarma = 0;
@@ -23,6 +27,19 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void Start()
+    {
+        //Initialize a sample game state
+        currentGameState = new GameState
+        {
+            levelsCompleted = 0,
+            goodKarma = 0,
+            badKarma = 0,
+            playerPos = Vector3.zero,
+            currentScene = "TestScene"
+        };
     }
 
     public void AddGoodKarma()
@@ -51,16 +68,16 @@ public class GameManager : MonoBehaviour
     {
         if ( goodKarma > badKarma )
         {
-            //SceneManager.LoadScene("GoodEnding");
+            SceneManager.LoadScene("GoodEnding");
             endingTriggered = true;
             Debug.Log("Good Ending Achieved!");
         }
 
         else
         {
-            //SceneManager.LoadScene("BadEnding");
+            SceneManager.LoadScene("BadEnding");
             endingTriggered = true;
-            Debug.Log("Bad Ending Achieveed!");
+            Debug.Log("Bad Ending Achieved!");
         }
     }
 
@@ -75,8 +92,57 @@ public class GameManager : MonoBehaviour
         levelsCompleted++;
     }
 
+    public void SaveCurrentGame()
+    {
+        //Update game state with current values
+        currentGameState.playerPos = player.transform.position;
+
+        string userId = SystemInfo.deviceUniqueIdentifier; //Simple user ID for testing
+
+        supabaseManager.SaveGame(userId, currentGameState, (success) =>
+        {
+            if (success)
+            {
+                Debug.Log("Game saved!");
+            }
+        });
+    }
+
+    public void LoadGame()
+    {
+        string userId = SystemInfo.deviceUniqueIdentifier;
+
+        supabaseManager.LoadGame(userId, (loadedState) =>
+        {
+            if (loadedState != null)
+            {
+                currentGameState = loadedState;
+
+                //Apply the loaded state to your game
+                player.transform.position = loadedState.playerPos;
+                Debug.Log($"Game loaded! Level: {loadedState.currentScene}, Good Karma: {loadedState.goodKarma}, Bad Karma: {loadedState.badKarma}");
+            }
+            else
+            {
+                Debug.Log("No save data found");
+            }
+        });
+    }
+
     void Update()
     {
+        //Press S to save
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SaveCurrentGame();
+        }
+
+        //Press L to load
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            LoadGame();
+        }
+
         TriggerEnding();
     }
 }

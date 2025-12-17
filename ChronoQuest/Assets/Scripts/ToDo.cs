@@ -89,10 +89,17 @@ public class ToDo : MonoBehaviour
      * ToDo: Add Level Select
      */
 
+    /* Game Saving:
+     * Fix: Debug SupabaseManager script - DONE
+     * ToDo: Update GameManager script to test saving and loading - DONE
+     * ToDo: Test to ensure saving, serializing, and loading all work properly - DONE
+     * ToDo: Ensure the Supabase Manager stays with the Game Manager between scenes
+     * ToDo: Give the player a notification that the game has saved successfully
+     */
+
     /* Other Checklists:
      * Co-Op Mode
      * Menus
      * Game Options
-     * Game Saving
      */
 }
