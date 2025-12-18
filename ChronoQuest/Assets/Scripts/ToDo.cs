@@ -93,8 +93,10 @@ public class ToDo : MonoBehaviour
      * Fix: Debug SupabaseManager script - DONE
      * ToDo: Update GameManager script to test saving and loading - DONE
      * ToDo: Test to ensure saving, serializing, and loading all work properly - DONE
-     * ToDo: Ensure the Supabase Manager stays with the Game Manager between scenes
-     * ToDo: Give the player a notification that the game has saved successfully
+     * ToDo: Ensure the Supabase Manager stays with the Game Manager between scenes - Working On
+     * ToDo: Give the player a notification that the game has saved successfully - Working On
+     * ToDo: Ensure different players can save/load independently
+     * ToDo: Player can save/load from the pause menu
      */
 
     /* Other Checklists:

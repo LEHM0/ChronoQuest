@@ -23,6 +23,23 @@ public class SupabaseManager : MonoBehaviour
 
     private string tableName = "game_saves";
 
+    public static SupabaseManager instance;
+
+    void Awake()
+    {
+        //Ensures SupabaseManager stays across all levels
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void SaveGame(string userId, GameState gameState, Action<bool> onComplete)
     {
         StartCoroutine(SaveGameCoroutine(userId, gameState, onComplete));
