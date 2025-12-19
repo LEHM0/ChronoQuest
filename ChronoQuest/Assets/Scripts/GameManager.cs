@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int levelsCompleted = 0;
     public int goodKarma = 0;
     public int badKarma = 0;
+    public string currentScene;
     public bool endingTriggered = false;
 
     void Awake()
@@ -119,7 +120,13 @@ public class GameManager : MonoBehaviour
                 currentGameState = loadedState;
 
                 //Apply the loaded state to your game
+                levelsCompleted = loadedState.levelsCompleted;
+                goodKarma = loadedState.goodKarma;
+                badKarma = loadedState.badKarma;
                 player.transform.position = loadedState.playerPos;
+                //Load correct scene
+                currentScene = loadedState.currentScene;
+
                 Debug.Log($"Game loaded! Level: {loadedState.currentScene}, Good Karma: {loadedState.goodKarma}, Bad Karma: {loadedState.badKarma}");
             }
             else
@@ -131,13 +138,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //Press S to save
+        //Press 1 to save
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SaveCurrentGame();
         }
 
-        //Press L to load
+        //Press 2 to load
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             LoadGame();

@@ -2474,6 +2474,7 @@ GameObject:
   - component: {fileID: 1836443606}
   - component: {fileID: 1836443605}
   - component: {fileID: 1836443607}
+  - component: {fileID: 1836443608}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -2576,6 +2577,19 @@ MonoBehaviour:
   goodKarma: 0
   badKarma: 0
   endingTriggered: 0
+--- !u!114 &1836443608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836443602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b45884dace611a438fd3a1a606dedfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeveloperMode
+  devModeActive: 1
 --- !u!1 &1851184483
 GameObject:
   m_ObjectHideFlags: 0
