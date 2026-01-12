@@ -1,19 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private SupabaseManager supabaseManager;
     private GameState currentGameState;
+    private PlayerNotifications playerNotifications;
 
     public static GameManager instance;
 
+    public GameObject notifWindow;
     public GameObject player;
     public int levelsCompleted = 0;
     public int goodKarma = 0;
     public int badKarma = 0;
     public string currentScene;
     public bool endingTriggered = false;
+
+    private string saveNotif = "Game Saved Successfully";
 
     void Awake()
     {
@@ -41,6 +48,8 @@ public class GameManager : MonoBehaviour
             playerPos = Vector3.zero,
             currentScene = "TestScene"
         };
+
+        playerNotifications = notifWindow.GetComponent<PlayerNotifications>();
     }
 
     public void AddGoodKarma()
@@ -105,6 +114,7 @@ public class GameManager : MonoBehaviour
             if (success)
             {
                 Debug.Log("Game saved!");
+                StartCoroutine(playerNotifications.PlayerNotification(saveNotif));
             }
         });
     }

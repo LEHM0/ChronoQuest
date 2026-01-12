@@ -8,9 +8,9 @@ public class ToDo : MonoBehaviour
      * Fix: Player tips over - DONE
      * Fix: Player moves too fast - DONE
      * Camera follows Player POV - DONE
-     * Player can turn using the Mouse - Working On
+     * Player can turn using the Mouse - DONE
      * ToDo: Significantly improve camera sensitivity - DONE
-     * Fix: Camera's Y rotation is inverted - Working On
+     * Fix: Camera's Y rotation is inverted - DONE
      */
 
     /* NPC Interaction:
@@ -29,7 +29,6 @@ public class ToDo : MonoBehaviour
      * Player can pick up first item in trading sequence - DONE
      * Player can interact with trader npcs who ask for certain items - Need to work on dialogue
      * Interacting with traders in the correct sequence trades one item for another - DONE
-     * ToDo: Refactor TradingQuest into TraderNPCController?
      */
 
     /* Sound Tone Puzzle Logic:
@@ -94,7 +93,7 @@ public class ToDo : MonoBehaviour
      * ToDo: Update GameManager script to test saving and loading - DONE
      * ToDo: Test to ensure saving, serializing, and loading all work properly - DONE
      * ToDo: Ensure the Supabase Manager stays with the Game Manager between scenes - DONE
-     * ToDo: Give the player a notification that the game has saved successfully - Working On
+     * ToDo: Give the player a notification that the game has saved successfully - DONE
      * ToDo: Ensure different players can save/load independently
      * ToDo: Player can save/load from the pause menu
      */
