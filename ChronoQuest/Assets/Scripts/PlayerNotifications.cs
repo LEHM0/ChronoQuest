@@ -11,14 +11,8 @@ public class PlayerNotifications : MonoBehaviour
         notifText.color = new Color(notifText.color.r, notifText.color.g, notifText.color.b, 0f);
     }
 
-    void Update()
-    {
-        //
-    }
-
     public IEnumerator PlayerNotification(string notification)
     {
-        //
         float timePassed = 0f;
         Color startColor = notifText.color;
         Color targetColor = new Color(startColor.r, startColor.g, startColor.b, 1f);

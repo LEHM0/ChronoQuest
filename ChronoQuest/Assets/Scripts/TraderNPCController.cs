@@ -23,6 +23,8 @@ public class TraderNPCController : NPCController
 
     public override void Talk()
     {
+        //base.Talk();
+
         if (canTalk && Input.GetKeyDown(KeyCode.Mouse0))
         {
             Trade();

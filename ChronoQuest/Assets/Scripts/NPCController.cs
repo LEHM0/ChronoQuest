@@ -68,7 +68,6 @@ public class NPCController : MonoBehaviour
                 if (!isDialogueActive)
                 {
                     Debug.Log($"{npcName} says hello!");
-                    //ToDo: Loop through all available dialogue
                     dUI.StartDialogue(mainDialogue.dialogue, npcName);
                     isDialogueActive = true;
                 }

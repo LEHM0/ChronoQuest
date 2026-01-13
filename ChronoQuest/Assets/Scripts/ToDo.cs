@@ -84,8 +84,8 @@ public class ToDo : MonoBehaviour
      * ToDo: Prevent TriggerEnding() from running infitely - DONE
      * ToDo: Allow test levels to properly be loaded - DONE
      * Fix: Camera disconnects between scenes - DONE
-     * ToDo: Add Moral Choice
-     * ToDo: Add Level Select
+     * ToDo: Add Moral Choice - DONE
+     * ToDo: Add Level Select - N/A
      */
 
     /* Game Saving:

@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEnding()
     {
-        if (!endingTriggered && levelsCompleted == 3)
+        if (!endingTriggered && levelsCompleted == 1)
         {
             JudgeEnding();
         }
@@ -91,14 +91,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ChooseLevel()
-    {
-        //
-    }
+    //public void ChooseLevel()
+    //{
+    //    //
+    //}
 
     public void ClearLevel()
     {
-        //
         levelsCompleted++;
     }
 

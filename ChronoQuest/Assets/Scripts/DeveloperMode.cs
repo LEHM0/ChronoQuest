@@ -10,8 +10,6 @@ public class DeveloperMode : MonoBehaviour
         if (devModeActive)
         {
             ChangeScene();
-            ChangeKarma();
-            ChangeClearedLevels();
         }
     }
 
@@ -46,15 +44,5 @@ public class DeveloperMode : MonoBehaviour
             SceneManager.LoadScene("SpaceAge");
             Debug.Log("Scene set to SpaceAge");
         }
-    }
-
-    public void ChangeKarma()
-    {
-        //
-    }
-
-    public void ChangeClearedLevels()
-    {
-        //
     }
 }
