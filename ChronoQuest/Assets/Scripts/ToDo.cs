@@ -20,14 +20,14 @@ public class ToDo : MonoBehaviour
      * ToDo: Tweak Dialogue Wrapping - DONE
      * ToDo: NPC's react differently to the timeline's state
      * (TL State will probably be it's own var in a diff script, but we'll save that for ltr)
-     * ToDo: Player can move through an NPCs dialogue one line at a time - Working On
+     * ToDo: Player can move through an NPCs dialogue one line at a time - DONE
      * Fix: Dialogue Window not appearing - DONE
-     * Fix: Only first line of dialogue appears - Working On
+     * Fix: Only first line of dialogue appears - DONE
      */
 
     /* Trading Quest:
      * Player can pick up first item in trading sequence - DONE
-     * Player can interact with trader npcs who ask for certain items - Need to work on dialogue
+     * Player can interact with trader npcs who ask for certain items - DONE
      * Interacting with traders in the correct sequence trades one item for another - DONE
      */
 
@@ -42,7 +42,7 @@ public class ToDo : MonoBehaviour
      * ToDo: Puzzle cannot be interacted with after completion - DONE
      * ToDo: Turn Puzzle into reuseable prefab - DONE
      * ToDo: Clean up and comment scripts - DONE
-     * ToDo: Add unique sound tones and tile textures
+     * ToDo: Add unique sound tones and tile textures - Working On
      */
 
     /* Puzzle Prefab Logic:

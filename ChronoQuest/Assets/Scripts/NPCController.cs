@@ -15,10 +15,10 @@ public class NPCController : MonoBehaviour
 
     //Dialogue system assets
     public GameObject dialogueWindow;
-    private DialogueUI dUI;
-    private bool isDialogueActive = false;
+    protected DialogueUI dUI;
+    protected bool isDialogueActive = false;
 
-    void Start()
+    void Awake()
     {
         dUI = dialogueWindow.GetComponent<DialogueUI>();
     }
@@ -78,10 +78,5 @@ public class NPCController : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void FacePlayer()
-    {
-        //if canTalk == true, turn to face the player
     }
 }
