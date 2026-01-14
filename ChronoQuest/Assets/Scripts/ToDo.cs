@@ -8,9 +8,9 @@ public class ToDo : MonoBehaviour
      * Fix: Player tips over - DONE
      * Fix: Player moves too fast - DONE
      * Camera follows Player POV - DONE
-     * Player can turn using the Mouse - Working On
+     * Player can turn using the Mouse - DONE
      * ToDo: Significantly improve camera sensitivity - DONE
-     * Fix: Camera's Y rotation is inverted - Working On
+     * Fix: Camera's Y rotation is inverted - DONE
      */
 
     /* NPC Interaction:
@@ -20,16 +20,15 @@ public class ToDo : MonoBehaviour
      * ToDo: Tweak Dialogue Wrapping - DONE
      * ToDo: NPC's react differently to the timeline's state
      * (TL State will probably be it's own var in a diff script, but we'll save that for ltr)
-     * ToDo: Player can move through an NPCs dialogue one line at a time - Working On
+     * ToDo: Player can move through an NPCs dialogue one line at a time - DONE
      * Fix: Dialogue Window not appearing - DONE
-     * Fix: Only first line of dialogue appears - Working On
+     * Fix: Only first line of dialogue appears - DONE
      */
 
     /* Trading Quest:
      * Player can pick up first item in trading sequence - DONE
-     * Player can interact with trader npcs who ask for certain items - Need to work on dialogue
+     * Player can interact with trader npcs who ask for certain items - DONE
      * Interacting with traders in the correct sequence trades one item for another - DONE
-     * ToDo: Refactor TradingQuest into TraderNPCController?
      */
 
     /* Sound Tone Puzzle Logic:
@@ -43,7 +42,7 @@ public class ToDo : MonoBehaviour
      * ToDo: Puzzle cannot be interacted with after completion - DONE
      * ToDo: Turn Puzzle into reuseable prefab - DONE
      * ToDo: Clean up and comment scripts - DONE
-     * ToDo: Add unique sound tones and tile textures
+     * ToDo: Add unique sound tones and tile textures - Working On
      */
 
     /* Puzzle Prefab Logic:
@@ -85,14 +84,23 @@ public class ToDo : MonoBehaviour
      * ToDo: Prevent TriggerEnding() from running infitely - DONE
      * ToDo: Allow test levels to properly be loaded - DONE
      * Fix: Camera disconnects between scenes - DONE
-     * ToDo: Add Moral Choice
-     * ToDo: Add Level Select
+     * ToDo: Add Moral Choice - DONE
+     * ToDo: Add Level Select - N/A
+     */
+
+    /* Game Saving:
+     * Fix: Debug SupabaseManager script - DONE
+     * ToDo: Update GameManager script to test saving and loading - DONE
+     * ToDo: Test to ensure saving, serializing, and loading all work properly - DONE
+     * ToDo: Ensure the Supabase Manager stays with the Game Manager between scenes - DONE
+     * ToDo: Give the player a notification that the game has saved successfully - DONE
+     * ToDo: Ensure different players can save/load independently
+     * ToDo: Player can save/load from the pause menu
      */
 
     /* Other Checklists:
      * Co-Op Mode
      * Menus
      * Game Options
-     * Game Saving
      */
 }

@@ -14,4 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
   - This is a test of the dialogue system.
-  - This is the second line. End Communication.

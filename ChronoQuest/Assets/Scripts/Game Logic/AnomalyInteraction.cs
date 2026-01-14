@@ -1,9 +1,21 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnomalyInteraction : MonoBehaviour
 {
     public GameObject model;
     public bool canInteract;
+
+    public GameObject choiceWindow;
+    public Button posKarmaButton;
+    public Button negKarmaButton;
+
+    private void Start()
+    {
+        posKarmaButton.onClick.AddListener(GoodKarmaChoice);
+        negKarmaButton.onClick.AddListener(BadKarmaChoice);
+
+    }
 
     void Update()
     {
@@ -14,14 +26,28 @@ public class AnomalyInteraction : MonoBehaviour
     {
         if (canInteract && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            //Good Ending Test - Works
-            //GameManager.instance.AddGoodKarma();
-            //GameManager.instance.TestClearLevel();
+            choiceWindow.SetActive(true);
 
-            //Bad Ending Test - Works
-            GameManager.instance.AddBadKarma();
-            GameManager.instance.ClearLevel();
+            Cursor.lockState = CursorLockMode.None;
         }
+    }
+
+    public void GoodKarmaChoice()
+    {
+        choiceWindow.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+
+        GameManager.instance.AddGoodKarma();
+        GameManager.instance.ClearLevel();
+    }
+
+    public void BadKarmaChoice()
+    {
+        choiceWindow.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+
+        GameManager.instance.AddBadKarma();
+        GameManager.instance.ClearLevel();
     }
 
     public void OnTriggerEnter(Collider other)
