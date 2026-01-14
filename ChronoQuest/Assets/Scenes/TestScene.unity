@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af443f5506e0a2040b7a1527ca69aae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TraderNPCController
-  model: {fileID: 0}
+  model: {fileID: 1836443602}
   canTalk: 0
   npcName: Luke
   defaultDialogue: {fileID: 11400000, guid: bed0878329e0ca14b9b9a6e2e350cb09, type: 2}
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af443f5506e0a2040b7a1527ca69aae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TraderNPCController
-  model: {fileID: 0}
+  model: {fileID: 1836443602}
   canTalk: 0
   npcName: Richard
   defaultDialogue: {fileID: 11400000, guid: bed0878329e0ca14b9b9a6e2e350cb09, type: 2}
@@ -2500,7 +2500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af443f5506e0a2040b7a1527ca69aae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TraderNPCController
-  model: {fileID: 0}
+  model: {fileID: 1836443602}
   canTalk: 0
   npcName: Luis
   defaultDialogue: {fileID: 11400000, guid: bed0878329e0ca14b9b9a6e2e350cb09, type: 2}
@@ -2578,7 +2578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af443f5506e0a2040b7a1527ca69aae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TraderNPCController
-  model: {fileID: 0}
+  model: {fileID: 1836443602}
   canTalk: 0
   npcName: Christian
   defaultDialogue: {fileID: 11400000, guid: bed0878329e0ca14b9b9a6e2e350cb09, type: 2}
