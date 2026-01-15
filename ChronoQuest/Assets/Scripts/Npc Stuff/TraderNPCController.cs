@@ -25,7 +25,55 @@ public class TraderNPCController : NPCController
     {
         if (canTalk && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Trade();
+            if (tradeItem > tq.hasItem)
+            {
+                //Trade Request Dialogue
+                if (!isDialogueActive)
+                {
+                    Debug.Log($"{npcName} wants to trade!");
+                    dUI.StartDialogue(baseDialogue.dialogue, npcName);
+                    isDialogueActive = true;
+                }
+                else
+                {
+                    dUI.EndDialogue();
+                    isDialogueActive = false;
+                }
+            }
+
+            else if (tradeItem < tq.hasItem)
+            {
+                //Trade Finished Dialogue
+                if (!isDialogueActive)
+                {
+                    Debug.Log($"{npcName} thanks you for the trade!");
+                    dUI.StartDialogue(finishedDialogue.dialogue, npcName);
+                    isDialogueActive = true;
+                }
+                else
+                {
+                    dUI.EndDialogue();
+                    isDialogueActive = false;
+                }
+            }
+
+            else
+            {
+                //Trading Dialogue
+                if (!isDialogueActive)
+                {
+                    Debug.Log($"{npcName} has traded with you!");
+                    dUI.StartDialogue(tradingDialogue.dialogue, npcName);
+                    isDialogueActive = true;
+                }
+                else
+                {
+                    dUI.EndDialogue();
+                    isDialogueActive = false;
+                }
+
+                Trade();
+            }
         }
     }
 
@@ -33,7 +81,6 @@ public class TraderNPCController : NPCController
     {
         if (tradeItem == tq.hasItem)
         {
-            //Trade Dialogue
             tq.hasItem += 1;
         }
     }
