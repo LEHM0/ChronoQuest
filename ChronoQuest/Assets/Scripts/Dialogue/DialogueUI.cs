@@ -11,7 +11,7 @@ public class DialogueUI : MonoBehaviour
     //Main dialogue assets
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] TextMeshProUGUI nameText;
-    [SerializeField] GameObject textBox;
+    //[SerializeField] GameObject textBox;
 
     //Dialogue Tracker
     public static event Action OnDialogueStarted;
@@ -26,7 +26,7 @@ public class DialogueUI : MonoBehaviour
         nameText.text = name;
         nameText.gameObject.SetActive(true);
         dialogueText.gameObject.SetActive(true);
-        textBox.SetActive(true);
+        //textBox.SetActive(true);
 
         StopAllCoroutines();
         StartCoroutine(RunDialogue(dialogue));
@@ -60,7 +60,7 @@ public class DialogueUI : MonoBehaviour
         }
 
         OnDialogueEnded?.Invoke();
-        textBox.gameObject.SetActive(false);
+        //textBox.gameObject.SetActive(false);
     }
 
     public void SkipLine()
@@ -73,6 +73,6 @@ public class DialogueUI : MonoBehaviour
         //Disable all dialogue assets
         nameText.gameObject.SetActive(false);
         dialogueText.gameObject.SetActive(false);
-        textBox.SetActive(false);
+        //textBox.SetActive(false);
     }
 }

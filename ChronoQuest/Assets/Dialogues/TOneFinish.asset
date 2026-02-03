@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TOneFinish
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - Thank you for the item!
+  - Thank you for the coin!

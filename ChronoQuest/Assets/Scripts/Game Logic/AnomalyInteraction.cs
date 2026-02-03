@@ -29,6 +29,7 @@ public class AnomalyInteraction : MonoBehaviour
             choiceWindow.SetActive(true);
 
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 

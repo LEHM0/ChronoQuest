@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TOneTrade
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - This is a [Item 1]! I will give it to you in exchange for [Item 2].
+  - This is a coin! I will give it to you in exchange for opening the way.

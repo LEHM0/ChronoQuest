@@ -103,4 +103,18 @@ public class ToDo : MonoBehaviour
      * Menus
      * Game Options
      */
+
+    /* File Corruptions:
+     * 2 Unknown Scripts Referenced - N/A
+     * Player is too high - DONE
+     * Trader NPC Dialogue Missing - N/A
+     * Player cannot interact w/ NPCs - DONE
+     * Missing Anomaly Text - DONE
+     * ToDo: Set up Obstacles + Walls - DONE
+     * -> Tile Match - DONE
+     * -> Trader - DONE
+     * -> Sound Tone Match - DONE
+     * -> Anomaly - DONE
+     * ToDo: Test Saving + Loading - N/A
+     */
 }

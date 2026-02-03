@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TOneBase
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   dialogue:
-  - Can you find me a [Item One]?
+  - Can you find me a Coin?

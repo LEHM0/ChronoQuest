@@ -1,9 +1,16 @@
 using UnityEngine;
 
-public class TradingQuest : MonoBehaviour
+public class TradingQuest : Puzzle
 {
     public GameObject tradeController; // Redundant?
     public GameObject[] traderNpcs;
     public int hasItem = 0;
-    //0 = Empty, 6 = Finished
+
+    protected override void Update()
+    {
+        if (hasItem == 2 && !solved)
+        {
+            solved = true;
+        }
+    }
 }
