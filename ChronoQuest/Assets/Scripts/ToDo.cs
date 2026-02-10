@@ -114,7 +114,20 @@ public class ToDo : MonoBehaviour
      * -> Tile Match - DONE
      * -> Trader - DONE
      * -> Sound Tone Match - DONE
+     * Move Buttons Up
      * -> Anomaly - DONE
+     * Finish Anomaly Interaction Text
      * ToDo: Test Saving + Loading - N/A
+     * Fix: Missing camera data component?
+     */
+
+    /* Space Age:
+     * Create Door Prefab - Working On
+     * Create basic level geometry
+     * Finsh Sound Tone script logic
+     * Set up Sound Tone Puzzles
+     * Add Anomaly at end of level
+     * Add NPCs + Write Narrative
+     * Find + Implement A/V Assets
      */
 }
