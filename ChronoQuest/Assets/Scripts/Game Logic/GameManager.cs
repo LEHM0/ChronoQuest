@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEnding()
     {
-        if (!endingTriggered && levelsCompleted == 1)
+        if (!endingTriggered && levelsCompleted == 3)
         {
             JudgeEnding();
         }
@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
     public void ClearLevel()
     {
         levelsCompleted++;
+        //Load next scene
     }
 
     public void SaveCurrentGame()
