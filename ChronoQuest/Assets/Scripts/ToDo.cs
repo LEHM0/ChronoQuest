@@ -119,11 +119,25 @@ public class ToDo : MonoBehaviour
      * Finish Anomaly Interaction Text
      * ToDo: Test Saving + Loading - N/A
      * Fix: Missing camera data component?
+     * ToDo: Main Menu
+     * ToDo: Proper Level Transition
      */
 
     /* Space Age:
      * Create Door Prefab - Working On
      * Create basic level geometry
+     * -> Hub - DONE
+     * -> Hub-East Zone Hallway - DONE
+     * -> East Zone - DONE
+     * -> East Zone-South Zone Hallway
+     * -> South Zone
+     * -> Hub-South Zone Hallway - Working On
+     * -> South Zone-West Zone Hallways
+     * -> West Zone
+     * -> Hub-West Zone Hallway
+     * -> North (Final) Zone
+     * -> Hub-North Zone Hallway
+     * -> Roofs
      * Finsh Sound Tone script logic
      * Set up Sound Tone Puzzles
      * Add Anomaly at end of level
