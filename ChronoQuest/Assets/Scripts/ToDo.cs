@@ -129,12 +129,12 @@ public class ToDo : MonoBehaviour
      * -> Hub - DONE
      * -> Hub-East Zone Hallway - DONE
      * -> East Zone - DONE
-     * -> East Zone-South Zone Hallway
-     * -> South Zone
-     * -> Hub-South Zone Hallway - Working On
-     * -> South Zone-West Zone Hallways
-     * -> West Zone
-     * -> Hub-West Zone Hallway
+     * -> East Zone-South Zone Hallway - DONE
+     * -> South Zone - DONE
+     * -> Hub-South Zone Hallway - DONE
+     * -> South Zone-West Zone Hallways - Working On
+     * -> West Zone - DONE
+     * -> Hub-West Zone Hallway - DONE
      * -> North (Final) Zone
      * -> Hub-North Zone Hallway
      * -> Roofs
