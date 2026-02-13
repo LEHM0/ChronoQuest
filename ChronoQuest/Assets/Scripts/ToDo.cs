@@ -132,11 +132,11 @@ public class ToDo : MonoBehaviour
      * -> East Zone-South Zone Hallway - DONE
      * -> South Zone - DONE
      * -> Hub-South Zone Hallway - DONE
-     * -> South Zone-West Zone Hallways - Working On
+     * -> South Zone-West Zone Hallways - DONE
      * -> West Zone - DONE
      * -> Hub-West Zone Hallway - DONE
-     * -> North (Final) Zone
-     * -> Hub-North Zone Hallway
+     * -> North (Final) Zone - DONE
+     * -> Hub-North Zone Hallway - DONE
      * -> Roofs
      * Finsh Sound Tone script logic
      * Set up Sound Tone Puzzles
