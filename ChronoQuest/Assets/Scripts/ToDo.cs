@@ -140,8 +140,9 @@ public class ToDo : MonoBehaviour
      * -> Roofs
      * Finsh Sound Tone script logic
      * Set up Sound Tone Puzzles
-     * Add Anomaly at end of level
+     * Add Anomaly at end of level - DONE
      * Add NPCs + Write Narrative
      * Find + Implement A/V Assets
+     * Copy/Paste Canvas Assets
      */
 }
