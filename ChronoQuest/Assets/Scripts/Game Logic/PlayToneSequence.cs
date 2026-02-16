@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayToneSequence : MonoBehaviour
@@ -25,10 +26,16 @@ public class PlayToneSequence : MonoBehaviour
             foreach (int i in stm.toneSequence)
             {
                 Debug.Log($"Playing tone in sequence: {i}");
-                //Will play each tone audio in sequence
-                //Maybe w/ a Coroutine?
+                //StartCoroutine(CoroutineName());
             }
         }
+    }
+
+    //Use a forloop to play each audio clip? WaitForSeconds?
+    IEnumerator CoroutineName()
+    {
+        //audioSource.PlayOneShot(soundName, 1);
+        yield return null;
     }
 
     public void OnTriggerEnter(Collider other)

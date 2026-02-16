@@ -6,11 +6,14 @@ public class CreateNewToneSequence : MonoBehaviour
     public bool canInteract = false;
 
     public GameObject soundToneController;
+    public AudioClip soundTone;
     private SoundToneMatching stm;
+    private AudioSource audioSource;
 
     void Start()
     {
         stm = soundToneController.GetComponent<SoundToneMatching>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -24,7 +27,7 @@ public class CreateNewToneSequence : MonoBehaviour
         if (canInteract && Input.GetKeyDown(KeyCode.Mouse0) && !stm.solved)
         {
             Debug.Log($"Playing tone: {toneNum}");
-            //Play the individual tone audio
+            audioSource.PlayOneShot(soundTone, 1);
 
             CreateSequence();
         }
