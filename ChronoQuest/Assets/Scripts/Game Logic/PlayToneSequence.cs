@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayToneSequence : MonoBehaviour
@@ -7,18 +8,23 @@ public class PlayToneSequence : MonoBehaviour
 
     public GameObject soundToneController;
     private SoundToneMatching stm;
+    private AudioSource audioSource;
+
+    public AudioClip[] soundToneArray = new AudioClip[4];
+    public List<AudioClip> sequenceList;
 
     void Start()
     {
         stm = soundToneController.GetComponent<SoundToneMatching>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        PlaySequence();
+        GenerateSequence();
     }
 
-    public void PlaySequence()
+    public void GenerateSequence() //ToDo: Separate into two functions
     {
         //When pressed, a unique series of sound tones is played
         if (canInteract && Input.GetKeyDown(KeyCode.Mouse0) && !stm.solved)
@@ -26,16 +32,27 @@ public class PlayToneSequence : MonoBehaviour
             foreach (int i in stm.toneSequence)
             {
                 Debug.Log($"Playing tone in sequence: {i}");
-                //StartCoroutine(CoroutineName());
+                sequenceList.Add(soundToneArray[i]); //Fix: Only adds two slots to the list
+                StartCoroutine(PlaySequence());
             }
         }
     }
 
-    //Use a forloop to play each audio clip? WaitForSeconds?
-    IEnumerator CoroutineName()
+    IEnumerator PlaySequence()
     {
         //audioSource.PlayOneShot(soundName, 1);
         yield return null;
+
+        for (int i = 0; i < soundToneArray.Length; i++)
+        {
+            audioSource.clip = soundToneArray[i];
+            audioSource.Play();
+
+            while (audioSource.isPlaying)
+            {
+                yield return null;
+            }
+        }
     }
 
     public void OnTriggerEnter(Collider other)

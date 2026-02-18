@@ -7774,6 +7774,18 @@ PrefabInstance:
       propertyPath: puzzleID
       value: Sound Tone 01
       objectReference: {fileID: 0}
+    - target: {fileID: 2833893114474803229, guid: 529db55abe82d0149bcf6e350e22a93e, type: 3}
+      propertyPath: 'toneSequence.Array.data[1]'
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833893114474803229, guid: 529db55abe82d0149bcf6e350e22a93e, type: 3}
+      propertyPath: 'toneSequence.Array.data[2]'
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833893114474803229, guid: 529db55abe82d0149bcf6e350e22a93e, type: 3}
+      propertyPath: 'toneSequence.Array.data[3]'
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6134791079575831404, guid: 529db55abe82d0149bcf6e350e22a93e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
