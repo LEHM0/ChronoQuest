@@ -138,7 +138,7 @@ public class ToDo : MonoBehaviour
      * -> North (Final) Zone - DONE
      * -> Hub-North Zone Hallway - DONE
      * -> Roofs
-     * Finsh Sound Tone script logic
+     * Finsh Sound Tone script logic - Working On
      * Set up Sound Tone Puzzles
      * Add Anomaly at end of level - DONE
      * Add NPCs + Write Narrative

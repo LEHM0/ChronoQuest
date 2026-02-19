@@ -17,14 +17,21 @@ public class PlayToneSequence : MonoBehaviour
     {
         stm = soundToneController.GetComponent<SoundToneMatching>();
         audioSource = gameObject.GetComponent<AudioSource>();
+
+        GenerateSequence();
     }
 
     void Update()
     {
-        GenerateSequence();
+        PlaySequence();
     }
 
-    public void GenerateSequence() //ToDo: Separate into two functions
+    public void GenerateSequence()
+    {
+        //sequenceList.Add(soundToneArray[i]); //Fix: Only adds two slots to the list
+    }
+
+    public void PlaySequence()
     {
         //When pressed, a unique series of sound tones is played
         if (canInteract && Input.GetKeyDown(KeyCode.Mouse0) && !stm.solved)
@@ -32,13 +39,12 @@ public class PlayToneSequence : MonoBehaviour
             foreach (int i in stm.toneSequence)
             {
                 Debug.Log($"Playing tone in sequence: {i}");
-                sequenceList.Add(soundToneArray[i]); //Fix: Only adds two slots to the list
-                StartCoroutine(PlaySequence());
+                StartCoroutine(PlaySequenceCoroutine());
             }
         }
     }
 
-    IEnumerator PlaySequence()
+    IEnumerator PlaySequenceCoroutine()
     {
         //audioSource.PlayOneShot(soundName, 1);
         yield return null;
