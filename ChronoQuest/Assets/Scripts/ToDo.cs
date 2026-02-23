@@ -125,7 +125,7 @@ public class ToDo : MonoBehaviour
 
     /* Space Age:
      * Create Door Prefab - Working On
-     * Create basic level geometry
+     * Create basic level geometry - DONE
      * -> Hub - DONE
      * -> Hub-East Zone Hallway - DONE
      * -> East Zone - DONE
@@ -137,12 +137,21 @@ public class ToDo : MonoBehaviour
      * -> Hub-West Zone Hallway - DONE
      * -> North (Final) Zone - DONE
      * -> Hub-North Zone Hallway - DONE
-     * -> Roofs
      * Finsh Sound Tone script logic - Working On
      * Set up Sound Tone Puzzles
      * Add Anomaly at end of level - DONE
      * Add NPCs + Write Narrative
-     * Find + Implement A/V Assets
+     * Find + Implement A/V Assets - Working On
+     * -> Walls - Found
+     * -> Floor - Found
+     * -> Roof - Found?
+     * -> Doors - Found
+     * -> Buttons - Looking For
+     * -> Skybox? - N/A
+     * -> Anomaly
+     * -> Music - Found? (Kevin Macleod)
+     * -> SFX
+     * -> NPCs - Found?
      * Copy/Paste Canvas Assets
      */
 }
