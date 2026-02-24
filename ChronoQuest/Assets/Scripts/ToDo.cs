@@ -142,14 +142,15 @@ public class ToDo : MonoBehaviour
      * Add Anomaly at end of level - DONE
      * Add NPCs + Write Narrative
      * Find + Implement A/V Assets - Working On
-     * -> Walls - Found
-     * -> Floor - Found
-     * -> Roof - Found?
-     * -> Doors - Found
+     * -> Walls - Experiencing Difficulties
+     * -> Floor - Working On
+     * -> Roof - Found
+     * -> Doors - DONE
+     * -> Readjust geometry - Working On
      * -> Buttons - Looking For
      * -> Skybox? - N/A
      * -> Anomaly
-     * -> Music - Found? (Kevin Macleod)
+     * -> Music - Found? (Kevin Macleod) (N/A?)
      * -> SFX
      * -> NPCs - Found?
      * Copy/Paste Canvas Assets
