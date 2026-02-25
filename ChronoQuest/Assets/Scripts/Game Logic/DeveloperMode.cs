@@ -44,5 +44,17 @@ public class DeveloperMode : MonoBehaviour
             SceneManager.LoadScene("SpaceAge");
             Debug.Log("Scene set to SpaceAge");
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            SceneManager.LoadScene("GoodEnding");
+            Debug.Log("Scene set to GoodEnding");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            SceneManager.LoadScene("BadEnding");
+            Debug.Log("Scene set to BadEnding");
+        }
     }
 }
