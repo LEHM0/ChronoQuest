@@ -11,14 +11,11 @@ public class PlayToneSequence : MonoBehaviour
     private AudioSource audioSource;
 
     public AudioClip[] soundToneArray = new AudioClip[4];
-    public List<AudioClip> sequenceList;
 
     void Start()
     {
         stm = soundToneController.GetComponent<SoundToneMatching>();
         audioSource = gameObject.GetComponent<AudioSource>();
-
-        GenerateSequence();
     }
 
     void Update()
@@ -26,39 +23,26 @@ public class PlayToneSequence : MonoBehaviour
         PlaySequence();
     }
 
-    public void GenerateSequence()
-    {
-        //sequenceList.Add(soundToneArray[i]); //Fix: Only adds two slots to the list
-    }
-
     public void PlaySequence()
     {
         //When pressed, a unique series of sound tones is played
         if (canInteract && Input.GetKeyDown(KeyCode.Mouse0) && !stm.solved)
         {
-            foreach (int i in stm.toneSequence)
-            {
-                Debug.Log($"Playing tone in sequence: {i}");
-                StartCoroutine(PlaySequenceCoroutine());
-            }
+            StartCoroutine(PlaySequenceCoroutine());
         }
     }
 
     IEnumerator PlaySequenceCoroutine()
     {
-        //audioSource.PlayOneShot(soundName, 1);
-        yield return null;
-
-        for (int i = 0; i < soundToneArray.Length; i++)
+        foreach (int i in stm.toneSequence)
         {
-            audioSource.clip = soundToneArray[i];
-            audioSource.Play();
+            audioSource.PlayOneShot(soundToneArray[i]);
+            Debug.Log($"Playing tone in sequence: {i}");
 
-            while (audioSource.isPlaying)
-            {
-                yield return null;
-            }
+            yield return new WaitForSeconds(soundToneArray[i].length + 0.1f);
         }
+
+        yield return null;
     }
 
     public void OnTriggerEnter(Collider other)

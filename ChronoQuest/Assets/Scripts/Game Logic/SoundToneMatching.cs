@@ -10,6 +10,14 @@ public class SoundToneMatching : Puzzle
     //Int controlling where a new input is added into the array
     public int indexValue = 0;
 
+    public AudioClip errorSound;
+    private AudioSource audioSource;
+
+    public void Start()
+    {
+        audioSource = gameObject.GetComponent<AudioSource>();
+    }
+
     protected override void Update()
     {
         base.Update();
@@ -31,6 +39,7 @@ public class SoundToneMatching : Puzzle
         else if (indexValue == 4 &&  !toneSequence.SequenceEqual(newSequence))
         {
             ResetSequence();
+            audioSource.PlayOneShot(errorSound, 1);
         }
     }
 
